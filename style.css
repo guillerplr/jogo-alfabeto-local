@@ -63,3 +63,7 @@ li {
   color: #ddd;
   border-radius: 8px;
 }
+
+li.selecionado{
+    background-color: #AAA;
+}
