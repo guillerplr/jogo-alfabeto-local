@@ -1,8 +1,19 @@
+const players = [];
+let roundTime = 10;
+
+function iniciaJogo(){
+  const jogador = document.querySelector(".jogador");
+  jogador.innerHTML = players[0]
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const playersContainer = document.getElementById("playerscontainer");
   const addPlayerBtn = document.getElementById("addPlayer");
   const form = document.getElementById("playerForm");
   let playerCount = 1;
+
 
   function createPlayerInput() {
     playerCount++;
@@ -42,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
 
     // Coleta todos os nomes dos jogadores
-    const players = [];
     const inputs = form.querySelectorAll(".player-input");
     inputs.forEach((input) => {
       if (input.value.trim()) {
@@ -50,14 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Aqui você pode fazer o que quiser com a lista de jogadores
-    console.log("Jogadores:", players);
+    roundTime = parseInt(document.getElementById('roundTime').value);
 
-    // Exemplo: armazenar no localStorage
+
+    // armazenar no localStorage
     localStorage.setItem("players", JSON.stringify(players));
 
     // Fecha o modal
     document.querySelector(".modal-overlay").style.display = "none";
+
+    iniciaJogo();
   });
 });
 
@@ -90,3 +102,5 @@ botoes.forEach((e) => {
   e.addEventListener("touchmove", preventSelect);
   e.addEventListener("contextmenu", preventSelect);
 });
+
+

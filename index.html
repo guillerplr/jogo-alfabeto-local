@@ -11,7 +11,7 @@
       <div class="modal-content">
         <div class="inicio">
           <form class="player-form" id="playerForm">
-            <h2>Digite o nome do jogador</h2>
+            <h2>Configurações do jogo</h2>
             <div id="playerscontainer">
               <div class="playersinputcontainer">
                 <input
@@ -25,6 +25,11 @@
             <button type="button" class="btn btn-add" id="addPlayer">
               Adicionar Jogador
             </button>
+            <div id="time-container">
+              <label class="time-label" for="roundTime">Tempo por Rodada (segundos):</label>
+              <input type="number" id="roundTime" class="time-input" value="10" pattern="\d*" inputmode="numeric" onkeypress="return event.charCode >= 48 && event.charCode <= 57" >
+          </div>
+            </div>
             <button type="submit" class="btn btn-start">Iniciar</button>
           </form>
         </div>
