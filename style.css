@@ -1,0 +1,35 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 24px;
+  margin: auto;
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  justify-items: center;
+  justify-content: center;
+  height: calc(75vh);
+}
+
+li {
+  background-color: #222;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ddd;
+  border-radius: 8px;
+}
