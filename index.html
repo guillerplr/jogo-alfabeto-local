@@ -7,10 +7,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="modal-overlay">
+      <div class="modal-content">
+        <div class="inicio">
+          <form class="player-form" id="playerForm">
+            <h2>Digite o nome do jogador</h2>
+            <div id="playerscontainer">
+              <div class="playersinputcontainer">
+                <input
+                  type="text"
+                  class="player-input"
+                  placeholder="Nome"
+                  required
+                />
+              </div>
+            </div>
+            <button type="button" class="btn btn-add" id="addPlayer">
+              Adicionar Jogador
+            </button>
+            <button type="submit" class="btn btn-start">Iniciar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="header">
-        <div>Nome do Jogador</div>
-        <div>Tempo restante</div>
+        <div class="jogador">Nome do Jogador</div>
+        <div class="tempo">Tempo restante</div>
       </div>
       <div class="jogo">
         <ul>
@@ -44,6 +68,6 @@
       </div>
       <div class="footer">Banner</div>
     </div>
-    <script src="scrit.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
